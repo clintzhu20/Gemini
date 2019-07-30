@@ -9,19 +9,25 @@ public class Window_Click : MonoBehaviour
     int LstPos=-1;
     int GetMousePos(Vector3 pos)
     {
-        if(pos.x>=212&&pos.x<=904&&pos.y<=1141&&pos.y>=660) return 0;
-        if(pos.x>=1247&&pos.x<=1937&&pos.y<=1141&&pos.y>=660) return 1;
-        if(pos.x>=212&&pos.x<=904&&pos.y<=536&&pos.y>=47) return 2;
-        if(pos.x>=1247&&pos.x<=1937&&pos.y<=536&&pos.y>=47) return 3;
+        // if(pos.x>=212&&pos.x<=904&&pos.y<=1141&&pos.y>=660) return 0;
+        // if(pos.x>=1247&&pos.x<=1937&&pos.y<=1141&&pos.y>=660) return 1;
+        // if(pos.x>=212&&pos.x<=904&&pos.y<=536&&pos.y>=47) return 2;
+        // if(pos.x>=1247&&pos.x<=1937&&pos.y<=536&&pos.y>=47) return 3;
+        if(pos.x<=(Screen.width/2)&&pos.y>=(Screen.height/2)) return 0;
+        if(pos.x>=(Screen.width/2)&&pos.y>=(Screen.height/2)) return 1;
+        if(pos.x<=(Screen.width/2)&&pos.y<=(Screen.height/2)) return 2;
+        if(pos.x>=(Screen.width/2)&&pos.y<=(Screen.height/2)) return 3;
         return 4;
     }
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
         {
+            print(Screen.width);
+            print(Screen.height);
             int Pos=GetMousePos(Input.mousePosition);
-            print(Input.mousePosition.x);
-            print(Input.mousePosition.y);
+            // print(Input.mousePosition.x);
+            // print(Input.mousePosition.y);
             if(Pos==4) return;
             print(Pos);
             if(cover[Pos]) return;

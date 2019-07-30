@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class Timer : MonoBehaviour
+public class Timer2 : MonoBehaviour
 {
     public Text Tim;
     public Text WinText;
     float NowT, LstT, LstT2;
+    public GameObject player;
     void Start()
     {
         NowT = LstT = LstT2 = Time.fixedTime;
@@ -15,21 +16,20 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int diff = 30 - (int)(NowT - LstT2);
-        Tim.text = diff.ToString();
+        int diff = 45 - (int)(NowT - LstT2);
+        Tim.text =  diff.ToString();
         NowT = Time.fixedTime;
         if (NowT - LstT >= 0.05f)
         {
             LstT = NowT;
         }
-        if (NowT - LstT2 >= 30.0f)
+        if (NowT - LstT2 >= 45.0f)
         {
-            GameObject text = GameObject.Find("Text");
             Tim.text = "0";
             WinText.text = "You Win!";
-            text.GetComponent<Text>().enabled = false;
-            Child.movement_speed = 0;
-            move_upward.move_up_factor = 0;
+            GameObject shoot = GameObject.Find("ShootController");
+            shoot.GetComponent<Ball_Appear>().enabled = false;
+            Destroy(player);
         }
     }
 }

@@ -11,6 +11,8 @@ public class Destroy_On_touch : MonoBehaviour
         if (other.gameObject.name == "player")
         {
             GameObject player = GameObject.Find("player");
+            GameObject cam = GameObject.Find("Main Camera");
+            cam.GetComponent<ShakeCamera>().enabled = true;
             player.GetComponent<Health_System>().health--;
             Destroy(this.gameObject);
         }

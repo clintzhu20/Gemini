@@ -24,4 +24,5 @@ public class Health_System : MonoBehaviour
             Losetext.text = "Oh NO!";
         }
     }
+    
 }

@@ -26,6 +26,7 @@ public class Timer2 : MonoBehaviour
         if (NowT - LstT2 >= 45.0f)
         {
             Tim.text = "0";
+            DodgeBall.winwin = true;
             WinText.text = "You Win!";
             GameObject shoot = GameObject.Find("ShootController");
             shoot.GetComponent<Ball_Appear>().enabled = false;

@@ -9,7 +9,7 @@ public class move_upward : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        move_up_factor = 1.7f;
     }
 
     // Update is called once per frame

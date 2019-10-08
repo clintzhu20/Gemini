@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class TextisInvisible : MonoBehaviour
 {
+    void start()
+    {
+        DieOnTouch.ifTouch = false;
+        GameObject timer = GameObject.Find("Timer");
+        timer.GetComponent<Timer>().enabled = true;
+        GetComponent<Text>().text = "";
+    }
     void Update()
     {
-        GameObject timer = GameObject.Find("Timer");
-        if (DieOnTouch.ifTouch == true)
+        if (DieOnTouch.ifTouch)
         {
-            GetComponent<Text>().enabled = true;
-            timer.GetComponent<Timer>().enabled = false;
 
         }
     }

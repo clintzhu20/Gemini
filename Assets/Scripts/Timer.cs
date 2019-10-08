@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public Text Tim;
@@ -27,9 +28,15 @@ public class Timer : MonoBehaviour
             GameObject text = GameObject.Find("Text");
             Tim.text = "0";
             WinText.text = "You Win!";
+            GameBool.Game1 = true;
             text.GetComponent<Text>().enabled = false;
             Child.movement_speed = 0;
             move_upward.move_up_factor = 0;
         }
+        if (Child.movement_speed == 0 && Input.GetKeyDown(KeyCode.T))
+        {
+            SceneManager.LoadScene("Level1");
+        }
+
     }
 }

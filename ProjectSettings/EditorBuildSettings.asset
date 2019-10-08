@@ -17,4 +17,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: da914e473be5e9d459f10848edfdc012
+  - enabled: 1
+    path: Assets/Scenes/Window_Game.unity
+    guid: 191c298cfb2224202b0891c41546fc93
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 4c98ad0186bff11408efd0b56393736f
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: bb41031366ceb434a833146a47b21036
+  - enabled: 1
+    path: Assets/Scenes/Stars.unity
+    guid: 03c6a1ed5f37949a3b5639a697497953
+  - enabled: 1
+    path: Assets/Scenes/movie.unity
+    guid: f01303cd1905caa44816350be2dca40c
+  - enabled: 1
+    path: Assets/Scenes/Tutorial_Window.unity
+    guid: 5c1a370703983d44eb7a301b03211130
+  - enabled: 1
+    path: Assets/Scenes/Tutorial_Teddy.unity
+    guid: 11340506be7d4cf49b85a8867f1b3e45
+  - enabled: 1
+    path: Assets/Scenes/Tutorial_Dodge.unity
+    guid: c75dafcbcad40314ca54658665dcb14a
+  - enabled: 1
+    path: Assets/Scenes/Tutorial_Star.unity
+    guid: ea3e48f08a8c22748af0e9af623eb2db
   m_configObjects: {}

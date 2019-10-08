@@ -19,7 +19,7 @@ public class Window_Random : MonoBehaviour
         //print(count);
         if(count>=3) return;
         NowT=Time.fixedTime;
-        if(NowT-LstT>=0.6f) Timeflag=false;
+        if(NowT-LstT>=0.5f) Timeflag=false;
         if(Timeflag) return;
         int ShowWin;
         //do

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class Star_Controller : MonoBehaviour
 {
     float NowT,LstT;
@@ -78,5 +78,7 @@ public class Star_Controller : MonoBehaviour
     {
         yield return new WaitForSeconds(4.0f);
         if(!Died) Win.enabled=true;
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene("movie");
     }
 }

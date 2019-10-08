@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Plot_Word : MonoBehaviour
 {
     IEnumerator OnCollisionEnter2D(Collision2D other)
@@ -10,8 +11,8 @@ public class Plot_Word : MonoBehaviour
         {
             GameObject plot = GameObject.Find("Text2");
             plot.GetComponent<Text>().enabled = true;
-            yield return new WaitForSeconds(5.0f);
-            plot.GetComponent<Text>().enabled = false;
+            yield return new WaitForSeconds(3.0f);
+            SceneManager.LoadScene("Tutorial_Window");
         }
     }
 }

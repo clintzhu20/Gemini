@@ -15,6 +15,6 @@ public class EnterGame : MonoBehaviour
 
         yield return new WaitForSeconds(2.0f);
 
-        SceneManager.LoadScene("Teddy_Falling");
+        SceneManager.LoadScene("Tutorial_Teddy");
     }
 }

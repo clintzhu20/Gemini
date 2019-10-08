@@ -49,5 +49,7 @@ public class Window_Click : MonoBehaviour
             }
             LstPos=Pos;
         }
+
+        
     }
 }
